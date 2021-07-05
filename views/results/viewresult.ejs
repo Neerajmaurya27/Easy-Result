@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action =  "/viewresult"  method="get">
+    <label for="view">Enter rollNo</label>
+    <input type="text" id="view" name="rollNo" value="rollNo">
+    <button type="submit">submit</button>
+
+    </form>
+
+    <%if(result){%>
+
+    <div class="container">
+        <div> <strong>Name:</strong> <%= result.name %> </div>
+        <div> <strong>Roll No:</strong> <%= result.rollNo %> </div>
+        
+    <table class="table table-striped">
+        <tr>
+            <th scope="col">Sno.</th>
+            <th scope="col">subject</th>
+            <th scope="col">Max Marks</th>
+            <th scope="col">Mark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>English</td>
+            <td>100</td>
+            <td><%= result.English%></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Physics</td>
+            <td>100</td>
+            <td><%= result.physics%></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td >Maths</td>
+            <td>100</td>
+            <td><%= result.Maths%></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Chemistry</td>
+            <td>100</td>
+            <td><%= result.Chemistry%></td>
+          
+        </tbody>
+      </table>
+
+    <%}%>
+</body>
+</html>

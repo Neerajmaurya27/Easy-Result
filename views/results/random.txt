@@ -1,0 +1,10 @@
+</tr>
+          <!-- <tr>
+            <th rowspan="" scope="row">Total</th>
+            
+            <td></td>
+            <td></td>
+            <% let subjects =[ result.Chemistry , result.Maths , result.physics ,  result.English]%>
+            <% let collection = collect(subjects) %>
+             <!-- <td> <% console.log(collection   )%></td> -->
+          </tr> -->

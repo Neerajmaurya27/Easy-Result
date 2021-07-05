@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Edit Result</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark container d-flex justify-content-center">
+        <a class="navbar-brand" href="#" style="font-weight: bolder;">
+           EasyResult
+        </a>
+      </nav>
+    <div class="container">
+        <form action="/results/<%=result.rollNo%>?_method=PUT" method="post">
+            <div class="mb-3">
+              <label for="Name" class="form-label" >NAME:</label>
+              <input type="text" name="name" class="form-control" value="<%=result.name%>"id="Name" aria-describedby="emailHelp" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="Rollno." class="form-label">ROLL NO:</label>
+              <input type="text" name="rollNo" value="<%=result.rollNo%>" class="form-control" id="Rollno." disabled>
+            </div>
+            <div class="mb-3 ">
+              <label class="form-label" for="English">english:</label>
+              <input type="text" name="English" value="<%=result.English%>" class="form-control" id="English">  
+            </div>
+            <div class="mb-3 ">
+                <label class="form-label" for="">physics:</label>
+                <input type="text" name="physics" value="<%=result.physics%>" class="form-control" id="exampleCheck1">  
+              </div>
+              <div class="mb-3 ">
+                <label class="form-label" for="Maths">Maths</label>
+                <input type="text" name="Maths" value="<%=result.Maths%>" class="form-control" id="Maths">  
+              </div>
+              <div class="mb-3 ">
+                <label class="form-label" for="Chemistry">Chemistry</label>
+                <input type="text" name="Chemistry" value="<%=result.Chemistry%>" class="form-control" id="Chemistry">  
+              </div>
+              <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+          </form>
+          <a href="/results"></a>
+        </div>
+</body>
+</html>
